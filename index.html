@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NINETEEN STUDIO</title>
   <meta name="description" content="NINETEEN STUDIO — 영상/브랜딩 콘텐츠 제작" />
   <meta name="theme-color" content="#0B0C0F" />
-  <title>NINETEEN STUDIO</title>
 
   <meta property="og:title" content="NINETEEN STUDIO" />
   <meta property="og:description" content="영상/브랜딩 콘텐츠 제작" />
@@ -13,209 +13,173 @@
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="assets/img/og.jpg" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
-  <script src="assets/js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+  <script src="assets/js/main.js?v=1" defer></script>
 </head>
 
 <body>
-  <a class="skip" href="#main">본문 바로가기</a>
+<a class="skip" href="#main">본문 바로가기</a>
 
-  <header class="header" data-header>
-    <div class="wrap header__inner">
-      <a class="brand" href="./" aria-label="NINETEEN STUDIO Home">
-        <span class="brand__mark">19</span>
-        <span class="brand__text">NINETEEN STUDIO</span>
+<header class="site-header" data-header>
+  <div class="container header-row">
+    <a class="logo" href="./" aria-label="Home">
+      <span class="logo-mark">19</span>
+      <span class="logo-type">NINETEEN STUDIO</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link is-active" href="./">Home</a>
+      <a class="nav-link" href="works.html">Works</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-burger" type="button" data-burger aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mnav" data-mnav hidden>
+    <a class="mnav-link is-active" href="./">Home</a>
+    <a class="mnav-link" href="works.html">Works</a>
+    <a class="mnav-link" href="about.html">About</a>
+    <a class="mnav-link" href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO (editorial / magazine) -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/img/hero.jpg" alt="" class="hero-img" loading="eager">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-kicker" data-reveal>CREATIVE PRODUCTION • SEOUL</div>
+
+      <h1 class="hero-title" data-reveal>
+        감각은 선명하게,<br/>
+        메시지는 정확하게.
+      </h1>
+
+      <p class="hero-desc" data-reveal>
+        브랜드 필름 · 광고/홍보 · 유튜브/숏폼 · 인터뷰/다큐 · 촬영/편집/후반
+      </p>
+
+      <div class="hero-actions" data-reveal>
+        <a class="btn btn-primary" href="works.html">View Works</a>
+        <a class="btn btn-ghost" href="contact.html">Start a Project</a>
+      </div>
+
+      <div class="hero-meta" data-reveal>
+        <div class="meta-item">
+          <span class="meta-k">Focus</span>
+          <span class="meta-v">Brand / Campaign / Short-form</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-k">Deliverables</span>
+          <span class="meta-v">Edit • Color • Sound • Caption</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED (editorial cards) -->
+  <section class="section">
+    <div class="container section-head">
+      <div>
+        <h2 class="h2" data-reveal>Featured</h2>
+        <p class="muted" data-reveal>선별한 대표 작업을 먼저 보여드려요.</p>
+      </div>
+      <a class="link" href="works.html" data-reveal>All Works →</a>
+    </div>
+
+    <div class="container works-grid">
+      <a class="work-card" href="works.html#work-01" data-reveal>
+        <img src="assets/img/work-01.jpg" alt="" loading="lazy">
+        <div class="work-cap">
+          <div class="work-title">Brand Film</div>
+          <div class="work-tag">Campaign • 30–60s</div>
+        </div>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link is-active" href="./">Home</a>
-        <a class="nav__link" href="works.html">Works</a>
-        <a class="nav__link" href="about.html">About</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-      </nav>
+      <a class="work-card" href="works.html#work-02" data-reveal>
+        <img src="assets/img/work-02.jpg" alt="" loading="lazy">
+        <div class="work-cap">
+          <div class="work-title">Commercial</div>
+          <div class="work-tag">Product • Studio</div>
+        </div>
+      </a>
 
-      <button class="burger" type="button" data-burger aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+      <a class="work-card" href="works.html#work-03" data-reveal>
+        <img src="assets/img/work-03.jpg" alt="" loading="lazy">
+        <div class="work-cap">
+          <div class="work-title">Interview</div>
+          <div class="work-tag">People • Story</div>
+        </div>
+      </a>
+
+      <a class="work-card" href="works.html#work-04" data-reveal>
+        <img src="assets/img/work-04.jpg" alt="" loading="lazy">
+        <div class="work-cap">
+          <div class="work-title">Short-form</div>
+          <div class="work-tag">Reels • TikTok</div>
+        </div>
+      </a>
     </div>
+  </section>
 
-    <div class="mnav" data-mnav hidden>
-      <a href="./" class="mnav__link is-active">Home</a>
-      <a href="works.html" class="mnav__link">Works</a>
-      <a href="about.html" class="mnav__link">About</a>
-      <a href="contact.html" class="mnav__link">Contact</a>
-      <div class="mnav__cta">
-        <a class="btn btn--primary" href="contact.html">프로젝트 문의</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="hero__media">
-        <video class="hero__video" autoplay muted loop playsinline poster="assets/img/hero.jpg">
-          <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
-        <img class="hero__img" src="assets/img/hero.jpg" alt="" loading="eager" />
-        <div class="hero__veil"></div>
-      </div>
-
-      <div class="wrap hero__content">
-        <p class="kicker" data-reveal>CREATIVE PRODUCTION</p>
-        <h1 class="hero__title" data-reveal>
-          감각은 선명하게,<br/>
-          메시지는 정확하게.
-        </h1>
-        <p class="hero__desc" data-reveal>
-          브랜드 필름 · 광고/홍보 · 유튜브/숏폼 · 인터뷰/다큐 · 촬영/편집/후반까지
+  <!-- STUDIO STATEMENT -->
+  <section class="section section-alt">
+    <div class="container editorial">
+      <div class="editorial-left" data-reveal>
+        <h2 class="h2">Studio Statement</h2>
+        <p class="lead">
+          감각적인 화면과 정확한 메시지를 동시에 잡는 제작을 지향합니다.
+          목적과 타깃에 맞춰 <b>구성 → 촬영 → 편집</b>을 한 흐름으로 설계해요.
         </p>
+      </div>
 
-        <div class="hero__actions" data-reveal>
-          <a class="btn btn--primary" href="works.html">작업물 보기</a>
-          <a class="btn btn--ghost" href="contact.html">문의하기</a>
+      <div class="editorial-right" data-reveal>
+        <div class="pill">Pre • Production • Post</div>
+        <div class="list">
+          <div class="list-row"><b>Pre</b><span>콘셉트/대본/무드/촬영안</span></div>
+          <div class="list-row"><b>Prod</b><span>촬영/조명/사운드/디렉팅</span></div>
+          <div class="list-row"><b>Post</b><span>편집/컬러/사운드/자막</span></div>
         </div>
-
-        <div class="hero__meta" data-reveal>
-          <div class="meta">
-            <span class="meta__label">Based in</span>
-            <span class="meta__value">Seoul</span>
-          </div>
-          <div class="meta">
-            <span class="meta__label">Email</span>
-            <a class="meta__value link" href="mailto:hello@nineteenstudio.kr">hello@nineteenstudio.kr</a>
-          </div>
-          <div class="meta">
-            <span class="meta__label">Phone</span>
-            <a class="meta__value link" href="tel:+821012345678">010-1234-5678</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap section__head">
-        <div>
-          <h2 class="h2" data-reveal>Featured Works</h2>
-          <p class="muted" data-reveal>대표 작업을 먼저 보여드려요.</p>
-        </div>
-        <a class="link more" href="works.html" data-reveal>전체 작업 보기 →</a>
-      </div>
-
-      <div class="wrap grid grid--works">
-        <a class="card-work" href="works.html#work-01" data-reveal>
-          <img src="assets/img/work-01.png" alt="Work 01" loading="lazy" />
-          <div class="card-work__cap">
-            <div class="card-work__title">Brand Film</div>
-            <div class="card-work__tag">Campaign · 30s</div>
-          </div>
-        </a>
-
-        <a class="card-work" href="works.html#work-02" data-reveal>
-          <img src="assets/img/work-02.png" alt="Work 02" loading="lazy" />
-          <div class="card-work__cap">
-            <div class="card-work__title">Commercial</div>
-            <div class="card-work__tag">Product · Studio</div>
-          </div>
-        </a>
-
-        <a class="card-work" href="works.html#work-03" data-reveal>
-          <img src="assets/img/work-03.png" alt="Work 03" loading="lazy" />
-          <div class="card-work__cap">
-            <div class="card-work__title">Interview</div>
-            <div class="card-work__tag">People · Story</div>
-          </div>
-        </a>
-
-        <a class="card-work" href="works.html#work-04" data-reveal>
-          <img src="assets/img/work-04.png" alt="Work 04" loading="lazy" />
-          <div class="card-work__cap">
-            <div class="card-work__title">Short-form</div>
-            <div class="card-work__tag">Reels · TikTok</div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="wrap section__head">
-        <h2 class="h2" data-reveal>Services</h2>
-        <p class="muted" data-reveal>기획부터 후반까지, 필요한 만큼만 유연하게.</p>
-      </div>
-
-      <div class="wrap grid grid--services">
-        <div class="card" data-reveal>
-          <h3 class="h3">Pre-Production</h3>
-          <p class="muted">콘셉트/대본/스토리보드, 레퍼런스 정리, 촬영 플랜.</p>
-          <ul class="list">
-            <li>콘셉트 & 무드보드</li>
-            <li>스크립트/구성</li>
-            <li>촬영 동선/콜시트</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3 class="h3">Production</h3>
-          <p class="muted">현장 퀄리티를 좌우하는 촬영/조명/오디오.</p>
-          <ul class="list">
-            <li>카메라/렌즈 세팅</li>
-            <li>조명 & 사운드</li>
-            <li>디렉팅</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3 class="h3">Post-Production</h3>
-          <p class="muted">편집, 색보정, 사운드, 자막/모션그래픽.</p>
-          <ul class="list">
-            <li>편집(리듬/톤)</li>
-            <li>컬러그레이딩</li>
-            <li>자막/모션/믹싱</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap section__head">
-        <h2 class="h2" data-reveal>Process</h2>
-        <p class="muted" data-reveal>명확한 단계로 일정/예산 리스크를 줄여요.</p>
-      </div>
-
-      <div class="wrap steps" data-reveal>
-        <div class="step"><span class="step__n">01</span><div><b>Brief</b><p class="muted">목표/타깃/예산/납기 정리</p></div></div>
-        <div class="step"><span class="step__n">02</span><div><b>Plan</b><p class="muted">콘셉트/구성/촬영안 확정</p></div></div>
-        <div class="step"><span class="step__n">03</span><div><b>Shoot</b><p class="muted">촬영/현장 디렉팅</p></div></div>
-        <div class="step"><span class="step__n">04</span><div><b>Edit</b><p class="muted">편집/색/사운드/자막</p></div></div>
-        <div class="step"><span class="step__n">05</span><div><b>Deliver</b><p class="muted">최종본 납품 + 포맷별 산출물</p></div></div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="wrap cta__inner" data-reveal>
-        <div>
-          <h2 class="h2">프로젝트를 시작해볼까요?</h2>
-          <p class="muted">레퍼런스 링크 1개만 있어도 충분해요. 빠르게 견적/일정 제안드릴게요.</p>
-        </div>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="contact.html">문의하기</a>
-          <a class="btn btn--ghost" href="mailto:hello@nineteenstudio.kr">메일 보내기</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="footer__left">
-        <div class="footer__brand">NINETEEN STUDIO</div>
-        <div class="muted">© <span data-year></span> NINETEEN STUDIO. All rights reserved.</div>
-      </div>
-      <div class="footer__right">
-        <a class="link" href="about.html">About</a>
-        <a class="link" href="works.html">Works</a>
-        <a class="link" href="contact.html">Contact</a>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner" data-reveal>
+      <div>
+        <h2 class="h2">프로젝트를 시작해볼까요?</h2>
+        <p class="muted">레퍼런스 링크 1개만 있어도 충분해요.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact</a>
+        <a class="btn btn-ghost" href="works.html">Browse Works</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="footer-left">
+      <div class="footer-brand">NINETEEN STUDIO</div>
+      <div class="muted">© <span data-year></span> NINETEEN STUDIO</div>
+    </div>
+    <div class="footer-right">
+      <a class="link" href="works.html">Works</a>
+      <a class="link" href="about.html">About</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
