@@ -3,100 +3,109 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="NINETEEN STUDIO About" />
   <title>About · NINETEEN STUDIO</title>
-
+  <meta name="description" content="About NINETEEN STUDIO" />
   <link rel="icon" href="assets/img/og.jpg" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
-  <script src="assets/js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+  <script src="assets/js/main.js?v=1" defer></script>
 </head>
 
 <body>
-  <a class="skip" href="#main">본문 바로가기</a>
+<a class="skip" href="#main">본문 바로가기</a>
 
-  <header class="header" data-header>
-    <div class="wrap header__inner">
-      <a class="brand" href="./" aria-label="NINETEEN STUDIO Home">
-        <span class="brand__mark">19</span>
-        <span class="brand__text">NINETEEN STUDIO</span>
-      </a>
+<header class="site-header" data-header>
+  <div class="container header-row">
+    <a class="logo" href="./" aria-label="Home">
+      <span class="logo-mark">19</span>
+      <span class="logo-type">NINETEEN STUDIO</span>
+    </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="./">Home</a>
-        <a class="nav__link" href="works.html">Works</a>
-        <a class="nav__link is-active" href="about.html">About</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-      </nav>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="./">Home</a>
+      <a class="nav-link" href="works.html">Works</a>
+      <a class="nav-link is-active" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
 
-      <button class="burger" type="button" data-burger aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+    <button class="nav-burger" type="button" data-burger aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mnav" data-mnav hidden>
+    <a class="mnav-link" href="./">Home</a>
+    <a class="mnav-link" href="works.html">Works</a>
+    <a class="mnav-link is-active" href="about.html">About</a>
+    <a class="mnav-link" href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-kicker" data-reveal>ABOUT</div>
+      <h1 class="h1" data-reveal>Editorial thinking, cinematic execution.</h1>
+      <p class="muted" data-reveal>브랜드의 “좋아함”을 만드는 화면을 설계합니다.</p>
     </div>
+  </section>
 
-    <div class="mnav" data-mnav hidden>
-      <a href="./" class="mnav__link">Home</a>
-      <a href="works.html" class="mnav__link">Works</a>
-      <a href="about.html" class="mnav__link is-active">About</a>
-      <a href="contact.html" class="mnav__link">Contact</a>
-      <div class="mnav__cta">
-        <a class="btn btn--primary" href="contact.html">프로젝트 문의</a>
+  <section class="section">
+    <div class="container editorial">
+      <div class="editorial-left" data-reveal>
+        <h2 class="h2">Approach</h2>
+        <p class="lead">
+          목적과 타깃에 맞는 메시지 설계가 우선이에요.
+          그 위에 촬영/편집의 리듬을 얹어, <b>끝까지 보는 영상</b>을 만듭니다.
+        </p>
       </div>
-    </div>
-  </header>
 
-  <main id="main" class="page">
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="kicker" data-reveal>ABOUT</p>
-        <h1 class="h1" data-reveal>브랜드의 “좋아함”을 만드는 영상.</h1>
-        <p class="muted" data-reveal>목적에 맞는 포맷과 톤으로 제작합니다.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap split" data-reveal>
-        <div>
-          <h2 class="h2">What we do</h2>
-          <p class="muted">
-            브랜드 필름, 광고/홍보, 유튜브, 숏폼, 인터뷰/다큐, 행사 스케치까지
-            기획-촬영-후반을 한 흐름으로 설계합니다.
-          </p>
-        </div>
+      <div class="editorial-right" data-reveal>
         <div class="card">
-          <h3 class="h3">Strength</h3>
-          <ul class="list">
-            <li>초반 훅/전개 설계</li>
-            <li>모바일 자막 가독성 기준</li>
-            <li>색/사운드/리듬 톤 통일</li>
+          <h3 class="h3">What we deliver</h3>
+          <div class="list">
+            <div class="list-row"><b>Structure</b><span>구성/대본/무드</span></div>
+            <div class="list-row"><b>Production</b><span>촬영/조명/사운드</span></div>
+            <div class="list-row"><b>Post</b><span>편집/컬러/자막</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">For</h3>
+          <ul class="bullets">
+            <li>브랜드 런칭/리브랜딩</li>
+            <li>캠페인/프로모션</li>
+            <li>유튜브/숏폼 시리즈</li>
+            <li>인터뷰/다큐</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta">
-      <div class="wrap cta__inner" data-reveal>
-        <div>
-          <h2 class="h2">방향부터 잡아볼까요?</h2>
-          <p class="muted">간단한 브리프만 주시면 제안드릴게요.</p>
-        </div>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="contact.html">문의하기</a>
-        </div>
+  <section class="cta">
+    <div class="container cta-inner" data-reveal>
+      <div>
+        <h2 class="h2">방향부터 잡아볼까요?</h2>
+        <p class="muted">간단한 브리프만 있어도 제안드릴게요.</p>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="footer__left">
-        <div class="footer__brand">NINETEEN STUDIO</div>
-        <div class="muted">© <span data-year></span> NINETEEN STUDIO.</div>
-      </div>
-      <div class="footer__right">
-        <a class="link" href="works.html">Works</a>
-        <a class="link" href="contact.html">Contact</a>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact</a>
       </div>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="footer-left">
+      <div class="footer-brand">NINETEEN STUDIO</div>
+      <div class="muted">© <span data-year></span> NINETEEN STUDIO</div>
+    </div>
+    <div class="footer-right">
+      <a class="link" href="works.html">Works</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
