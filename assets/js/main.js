@@ -1,112 +1,118 @@
 (() => {
-  const qs = (s, el = document) => el.querySelector(s);
-  const qsa = (s, el = document) => [...el.querySelectorAll(s)];
+  const $ = (s, p = document) => p.querySelector(s);
+  const $$ = (s, p = document) => [...p.querySelectorAll(s)];
 
-  // footer year
-  qsa("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
+  // year
+  const y = $('[data-year]');
+  if (y) y.textContent = new Date().getFullYear();
 
-  // mobile nav
-  const burger = qs("[data-burger]");
-  const mnav = qs("[data-mnav]");
+  // burger
+  const burger = $('[data-burger]');
+  const mnav = $('[data-mnav]');
   if (burger && mnav) {
-    burger.addEventListener("click", () => {
-      const open = burger.getAttribute("aria-expanded") === "true";
-      burger.setAttribute("aria-expanded", String(!open));
-      mnav.hidden = open;
-      document.body.style.overflow = open ? "" : "hidden";
-    });
-    qsa(".mnav__link").forEach(a => a.addEventListener("click", () => {
-      burger.setAttribute("aria-expanded", "false");
-      mnav.hidden = true;
-      document.body.style.overflow = "";
-    }));
-  }
-
-  // reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add("is-revealed");
-        io.unobserve(e.target);
+    burger.addEventListener('click', () => {
+      const open = !mnav.hasAttribute('hidden');
+      if (open) {
+        mnav.setAttribute('hidden', '');
+        burger.setAttribute('aria-expanded', 'false');
+      } else {
+        mnav.removeAttribute('hidden');
+        burger.setAttribute('aria-expanded', 'true');
       }
     });
-  }, { threshold: 0.12 });
-  qsa("[data-reveal]").forEach(el => io.observe(el));
+  }
 
-  // works filter
-  const chips = qsa("[data-filter]");
-  const works = qsa(".work");
-  if (chips.length && works.length) {
-    chips.forEach(btn => {
-      btn.addEventListener("click", () => {
-        chips.forEach(b => b.classList.remove("is-active"));
-        btn.classList.add("is-active");
-        const t = btn.dataset.filter;
-        works.forEach(w => {
-          const ok = (t === "all") || (w.dataset.type === t);
-          w.style.display = ok ? "" : "none";
+  // filter works
+  const chips = $$('[data-filter]');
+  const gallery = $('[data-gallery]');
+  if (chips.length && gallery) {
+    const items = $$('.work-card, .work', gallery);
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((c) => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+
+        const type = chip.dataset.filter;
+        items.forEach((it) => {
+          const t = it.dataset.type || 'all';
+          const show = (type === 'all') || (t === type);
+          it.style.display = show ? '' : 'none';
         });
       });
     });
   }
 
-  // modal (works)
-  const modal = qs("[data-modal]");
-  const openers = qsa("[data-modal-open]");
-  const closeEls = qsa("[data-modal-close]");
-  const mImg = qs("[data-modal-img]");
-  const mTitle = qs("[data-modal-title]");
-  const mDesc = qs("[data-modal-desc]");
+  // modal
+  const modal = $('[data-modal]');
+  if (modal) {
+    const img = $('[data-modal-img]', modal);
+    const title = $('[data-modal-title]', modal);
+    const desc = $('[data-modal-desc]', modal);
 
-  function closeModal() {
-    if (!modal) return;
-    modal.hidden = true;
-    document.body.style.overflow = "";
+    const close = () => modal.setAttribute('hidden', '');
+    const open = (btn) => {
+      const src = btn.dataset.img || '';
+      const t = btn.dataset.title || '';
+      const d = btn.dataset.desc || '';
+      if (img) img.src = src;
+      if (title) title.textContent = t;
+      if (desc) desc.textContent = d;
+      modal.removeAttribute('hidden');
+    };
+
+    $$('[data-modal-open]').forEach((btn) => {
+      btn.addEventListener('click', () => open(btn));
+    });
+
+    $$('[data-modal-close]', modal).forEach((el) => {
+      el.addEventListener('click', close);
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) close();
+    });
   }
-  function openModal(btn) {
-    if (!modal) return;
-    const { title, desc, img } = btn.dataset;
-    if (mTitle) mTitle.textContent = title || "";
-    if (mDesc) mDesc.textContent = desc || "";
-    if (mImg) {
-      mImg.src = img || "";
-      mImg.alt = title || "Work image";
-    }
-    modal.hidden = false;
-    document.body.style.overflow = "hidden";
-  }
 
-  openers.forEach(btn => btn.addEventListener("click", () => openModal(btn)));
-  closeEls.forEach(el => el.addEventListener("click", closeModal));
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
-
-  // contact form → mailto
-  const form = qs("#contactForm");
+  // contact form => mailto (no email display)
+  const form = $('#contactForm');
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const fd = new FormData(form);
-      const name = fd.get("name") || "";
-      const email = fd.get("email") || "";
-      const type = fd.get("type") || "";
-      const range = fd.get("range") || "";
-      const msg = fd.get("message") || "";
+      const name = (fd.get('name') || '').toString().trim();
+      const email = (fd.get('email') || '').toString().trim();
+      const type = (fd.get('type') || '').toString().trim();
+      const range = (fd.get('range') || '').toString().trim();
+      const message = (fd.get('message') || '').toString().trim();
 
-      const subject = encodeURIComponent(`[NINETEEN] 문의: ${type}`);
+      const subject = encodeURIComponent(`[NINETEEN] ${type || 'Project Inquiry'} - ${name}`);
       const body = encodeURIComponent(
-        `이름/회사: ${name}\n연락처/이메일: ${email}\n제작 목적: ${type}\n예산/일정: ${range}\n\n상세 내용:\n${msg}\n`
+        `Name/Company: ${name}\n` +
+        `Reply Email: ${email}\n` +
+        `Type: ${type}\n` +
+        `Budget/Schedule: ${range}\n\n` +
+        `Message:\n${message}\n`
       );
-      location.href = `mailto:hello@nineteenstudio.kr?subject=${subject}&body=${body}`;
+
+      // ✅ 여기만 너의 실제 수신 이메일로 바꿔 (페이지에 노출되지 않음)
+      const to = 'hello@nineteenstudio.kr';
+
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   }
 
-  // hero fallback: video 없으면 이미지로
-  const heroVideo = qs(".hero__video");
-  if (heroVideo) {
-    heroVideo.addEventListener("error", () => {
-      heroVideo.style.display = "none";
-    });
+  // reveal
+  const reveal = $$('[data-reveal]');
+  if (reveal.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.classList.add('is-in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveal.forEach((el) => io.observe(el));
   }
 })();
