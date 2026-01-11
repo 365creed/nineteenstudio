@@ -3,123 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="NINETEEN STUDIO Contact" />
   <title>Contact · NINETEEN STUDIO</title>
-
+  <meta name="description" content="Contact NINETEEN STUDIO" />
   <link rel="icon" href="assets/img/og.jpg" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
-  <script src="assets/js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+  <script src="assets/js/main.js?v=1" defer></script>
 </head>
 
 <body>
-  <a class="skip" href="#main">본문 바로가기</a>
+<a class="skip" href="#main">본문 바로가기</a>
 
-  <header class="header" data-header>
-    <div class="wrap header__inner">
-      <a class="brand" href="./" aria-label="NINETEEN STUDIO Home">
-        <span class="brand__mark">19</span>
-        <span class="brand__text">NINETEEN STUDIO</span>
-      </a>
+<header class="site-header" data-header>
+  <div class="container header-row">
+    <a class="logo" href="./" aria-label="Home">
+      <span class="logo-mark">19</span>
+      <span class="logo-type">NINETEEN STUDIO</span>
+    </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="./">Home</a>
-        <a class="nav__link" href="works.html">Works</a>
-        <a class="nav__link" href="about.html">About</a>
-        <a class="nav__link is-active" href="contact.html">Contact</a>
-      </nav>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="./">Home</a>
+      <a class="nav-link" href="works.html">Works</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link is-active" href="contact.html">Contact</a>
+    </nav>
 
-      <button class="burger" type="button" data-burger aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+    <button class="nav-burger" type="button" data-burger aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mnav" data-mnav hidden>
+    <a class="mnav-link" href="./">Home</a>
+    <a class="mnav-link" href="works.html">Works</a>
+    <a class="mnav-link" href="about.html">About</a>
+    <a class="mnav-link is-active" href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-kicker" data-reveal>CONTACT</div>
+      <h1 class="h1" data-reveal>Start a project.</h1>
+      <p class="muted" data-reveal>정적 사이트라 제출 시 메일 작성창이 열립니다.</p>
     </div>
+  </section>
 
-    <div class="mnav" data-mnav hidden>
-      <a href="./" class="mnav__link">Home</a>
-      <a href="works.html" class="mnav__link">Works</a>
-      <a href="about.html" class="mnav__link">About</a>
-      <a href="contact.html" class="mnav__link is-active">Contact</a>
-      <div class="mnav__cta">
-        <a class="btn btn--primary" href="contact.html">프로젝트 문의</a>
-      </div>
+  <section class="section">
+    <div class="container form-wrap" data-reveal>
+      <form class="form" id="contactForm">
+        <label class="field">
+          <span>Name / Company</span>
+          <input name="name" type="text" required placeholder="예) 홍길동 / NINETEEN" />
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input name="email" type="email" required placeholder="예) hello@company.com" />
+        </label>
+
+        <label class="field">
+          <span>Type</span>
+          <select name="type" required>
+            <option value="">선택</option>
+            <option>브랜드 필름</option>
+            <option>광고/홍보</option>
+            <option>유튜브/시리즈</option>
+            <option>숏폼</option>
+            <option>인터뷰/다큐</option>
+            <option>행사 스케치</option>
+            <option>기타</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Budget / Schedule</span>
+          <input name="range" type="text" placeholder="예) 300~500 / 2월 말 납기" />
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="7" required placeholder="레퍼런스 링크, 원하는 톤, 필수 포함 요소 등을 적어주세요."></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Send via Email</button>
+        <p class="muted small">제출 시 메일 앱이 열립니다.</p>
+      </form>
     </div>
-  </header>
+  </section>
+</main>
 
-  <main id="main" class="page">
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="kicker" data-reveal>CONTACT</p>
-        <h1 class="h1" data-reveal>문의 주시면 빠르게 답 드릴게요.</h1>
-        <p class="muted" data-reveal>정적 사이트라 mailto 방식으로 전송돼요.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap split">
-        <div class="card" data-reveal>
-          <h2 class="h2">Contact Info</h2>
-          <div class="kv">
-            <div class="kv__k">Email</div>
-            <div class="kv__v"><a class="link" href="mailto:hello@nineteenstudio.kr">hello@nineteenstudio.kr</a></div>
-            <div class="kv__k">Phone</div>
-            <div class="kv__v"><a class="link" href="tel:+821012345678">010-1234-5678</a></div>
-          </div>
-        </div>
-
-        <form class="form" data-reveal id="contactForm">
-          <h2 class="h2">Quick Brief</h2>
-
-          <label class="field">
-            <span>이름/회사</span>
-            <input name="name" type="text" required placeholder="예) 홍길동 / NINETEEN" />
-          </label>
-
-          <label class="field">
-            <span>연락처/이메일</span>
-            <input name="email" type="email" required placeholder="예) hello@company.com" />
-          </label>
-
-          <label class="field">
-            <span>제작 목적</span>
-            <select name="type" required>
-              <option value="">선택</option>
-              <option>브랜드 필름</option>
-              <option>광고/홍보</option>
-              <option>유튜브/시리즈</option>
-              <option>숏폼</option>
-              <option>인터뷰/다큐</option>
-              <option>행사 스케치</option>
-              <option>기타</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span>예산/일정</span>
-            <input name="range" type="text" placeholder="예) 300~500 / 2월 말 납기" />
-          </label>
-
-          <label class="field">
-            <span>상세 내용</span>
-            <textarea name="message" rows="6" required placeholder="레퍼런스 링크, 원하는 톤, 필수 포함 요소 등을 적어주세요."></textarea>
-          </label>
-
-          <button class="btn btn--primary" type="submit">메일로 보내기</button>
-          <p class="muted small">제출 시 메일 작성 화면이 열려요.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="footer__left">
-        <div class="footer__brand">NINETEEN STUDIO</div>
-        <div class="muted">© <span data-year></span> NINETEEN STUDIO.</div>
-      </div>
-      <div class="footer__right">
-        <a class="link" href="works.html">Works</a>
-        <a class="link" href="about.html">About</a>
-      </div>
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="footer-left">
+      <div class="footer-brand">NINETEEN STUDIO</div>
+      <div class="muted">© <span data-year></span> NINETEEN STUDIO</div>
     </div>
-  </footer>
+    <div class="footer-right">
+      <a class="link" href="works.html">Works</a>
+      <a class="link" href="about.html">About</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
