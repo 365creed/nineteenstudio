@@ -5,105 +5,101 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="NINETEEN STUDIO Works" />
   <title>Works · NINETEEN STUDIO</title>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <link rel="icon" href="assets/img/og.jpg" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
+  <script src="assets/js/main.js?v=10" defer></script>
 </head>
+
 <body>
+  <a class="skip" href="#main">본문 바로가기</a>
+
   <header class="header" data-header>
     <div class="wrap header__inner">
-      <a class="brand" href="/"><span class="brand__mark">19</span><span class="brand__text">NINETEEN STUDIO</span></a>
+      <a class="brand" href="./" aria-label="NINETEEN STUDIO Home">
+        <span class="brand__mark">19</span>
+        <span class="brand__text">NINETEEN STUDIO</span>
+      </a>
+
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="/">Home</a>
-        <a class="nav__link is-active" href="/works.html">Works</a>
-        <a class="nav__link" href="/about.html">About</a>
-        <a class="nav__link" href="/contact.html">Contact</a>
+        <a class="nav__link" href="./">Home</a>
+        <a class="nav__link is-active" href="works.html">Works</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
-      <button class="burger" type="button" data-burger aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
+
+      <button class="burger" type="button" data-burger aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
+
     <div class="mnav" data-mnav hidden>
-      <a href="/" class="mnav__link">Home</a>
-      <a href="/works.html" class="mnav__link is-active">Works</a>
-      <a href="/about.html" class="mnav__link">About</a>
-      <a href="/contact.html" class="mnav__link">Contact</a>
-      <div class="mnav__cta"><a class="btn btn--primary" href="/contact.html">프로젝트 문의</a></div>
+      <a href="./" class="mnav__link">Home</a>
+      <a href="works.html" class="mnav__link is-active">Works</a>
+      <a href="about.html" class="mnav__link">About</a>
+      <a href="contact.html" class="mnav__link">Contact</a>
+      <div class="mnav__cta">
+        <a class="btn btn--primary" href="contact.html">프로젝트 문의</a>
+      </div>
     </div>
   </header>
 
-  <main class="page">
+  <main id="main" class="page">
     <section class="page-hero">
       <div class="wrap">
         <p class="kicker" data-reveal>WORKS</p>
         <h1 class="h1" data-reveal>선명한 결과물로 증명합니다.</h1>
-        <p class="muted" data-reveal>썸네일/타이틀은 예시예요. 실제 작업명으로 바꿔 넣으면 끝.</p>
+        <p class="muted" data-reveal>카드 클릭 시 모달로 크게 보여요.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap toolbar" data-reveal>
-        <button class="chip is-active" data-filter="all">All</button>
-        <button class="chip" data-filter="brand">Brand</button>
-        <button class="chip" data-filter="ad">AD</button>
-        <button class="chip" data-filter="short">Short</button>
-        <button class="chip" data-filter="interview">Interview</button>
+        <button class="chip is-active" data-filter="all" type="button">All</button>
+        <button class="chip" data-filter="brand" type="button">Brand</button>
+        <button class="chip" data-filter="ad" type="button">AD</button>
+        <button class="chip" data-filter="short" type="button">Short</button>
+        <button class="chip" data-filter="interview" type="button">Interview</button>
       </div>
 
       <div class="wrap grid grid--works" data-gallery>
         <article class="work" id="work-01" data-type="brand" data-reveal>
-          <button class="work__btn" data-modal-open
+          <button class="work__btn" type="button" data-modal-open
             data-title="Brand Film — Campaign"
-            data-desc="브랜드 스토리 기반의 감정선 설계 / 30–60s"
-            data-img="/assets/img/work-01.jpg">
-            <img src="/assets/img/work-01.jpg" alt="Brand Film" loading="lazy">
+            data-desc="브랜드 스토리 기반 / 30–60s"
+            data-img="assets/img/work-01.png">
+            <img src="assets/img/work-01.png" alt="Brand Film" loading="lazy">
             <div class="work__cap"><b>Brand Film</b><span>Campaign · 30s</span></div>
           </button>
         </article>
 
         <article class="work" id="work-02" data-type="ad" data-reveal>
-          <button class="work__btn" data-modal-open
+          <button class="work__btn" type="button" data-modal-open
             data-title="Commercial — Product"
-            data-desc="제품 USP를 빠르게 전달하는 컷 구성"
-            data-img="/assets/img/work-02.jpg">
-            <img src="/assets/img/work-02.jpg" alt="Commercial" loading="lazy">
+            data-desc="제품 USP 전달 컷 구성"
+            data-img="assets/img/work-02.png">
+            <img src="assets/img/work-02.png" alt="Commercial" loading="lazy">
             <div class="work__cap"><b>Commercial</b><span>Product · Studio</span></div>
           </button>
         </article>
 
         <article class="work" id="work-03" data-type="interview" data-reveal>
-          <button class="work__btn" data-modal-open
+          <button class="work__btn" type="button" data-modal-open
             data-title="Interview — People"
-            data-desc="인터뷰 톤&매너 / 자막 시스템 / 리듬 편집"
-            data-img="/assets/img/work-03.jpg">
-            <img src="/assets/img/work-03.jpg" alt="Interview" loading="lazy">
+            data-desc="인터뷰 톤&매너 / 자막 시스템"
+            data-img="assets/img/work-03.png">
+            <img src="assets/img/work-03.png" alt="Interview" loading="lazy">
             <div class="work__cap"><b>Interview</b><span>People · Story</span></div>
           </button>
         </article>
 
         <article class="work" id="work-04" data-type="short" data-reveal>
-          <button class="work__btn" data-modal-open
+          <button class="work__btn" type="button" data-modal-open
             data-title="Short-form — Reels"
-            data-desc="초반 2초 훅 / 템포 최적화 / 자막 가독성"
-            data-img="/assets/img/work-04.jpg">
-            <img src="/assets/img/work-04.jpg" alt="Short-form" loading="lazy">
+            data-desc="초반 훅 / 템포 최적화"
+            data-img="assets/img/work-04.png">
+            <img src="assets/img/work-04.png" alt="Short-form" loading="lazy">
             <div class="work__cap"><b>Short-form</b><span>Reels · TikTok</span></div>
-          </button>
-        </article>
-
-        <article class="work" id="work-05" data-type="brand" data-reveal>
-          <button class="work__btn" data-modal-open
-            data-title="Brand — Lookbook"
-            data-desc="무드 중심 촬영 / 컬러 톤 통일"
-            data-img="/assets/img/work-05.jpg">
-            <img src="/assets/img/work-05.jpg" alt="Lookbook" loading="lazy">
-            <div class="work__cap"><b>Lookbook</b><span>Fashion · Mood</span></div>
-          </button>
-        </article>
-
-        <article class="work" id="work-06" data-type="ad" data-reveal>
-          <button class="work__btn" data-modal-open
-            data-title="AD — Event"
-            data-desc="현장 스케치 + 핵심 메시지 구성"
-            data-img="/assets/img/work-06.jpg">
-            <img src="/assets/img/work-06.jpg" alt="Event" loading="lazy">
-            <div class="work__cap"><b>Event</b><span>Recap · 45s</span></div>
           </button>
         </article>
       </div>
@@ -112,33 +108,33 @@
     <section class="cta">
       <div class="wrap cta__inner" data-reveal>
         <div>
-          <h2 class="h2">원하는 톤이 정해졌나요?</h2>
-          <p class="muted">레퍼런스 2~3개 링크만 보내주면 견적/일정 바로 잡아드려요.</p>
+          <h2 class="h2">비슷한 톤으로 제작 원해요</h2>
+          <p class="muted">레퍼런스 링크만 보내도 OK.</p>
         </div>
         <div class="cta__actions">
-          <a class="btn btn--primary" href="/contact.html">문의하기</a>
+          <a class="btn btn--primary" href="contact.html">문의하기</a>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- Modal -->
-  <div class="modal" data-modal hidden>
-    <div class="modal__backdrop" data-modal-close></div>
-    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Work detail">
-      <button class="modal__close" type="button" data-modal-close aria-label="닫기">×</button>
-      <div class="modal__body">
-        <img class="modal__img" data-modal-img src="" alt="">
-        <div class="modal__text">
-          <h3 class="h3" data-modal-title></h3>
-          <p class="muted" data-modal-desc></p>
-          <div class="modal__actions">
-            <a class="btn btn--ghost" href="/contact.html">이런 톤으로 문의하기</a>
+    <div class="modal" data-modal hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Work detail">
+        <button class="modal__close" type="button" data-modal-close aria-label="닫기">×</button>
+        <div class="modal__body">
+          <img class="modal__img" data-modal-img src="" alt="">
+          <div class="modal__text">
+            <h3 class="h3" data-modal-title></h3>
+            <p class="muted" data-modal-desc></p>
+            <div class="modal__actions">
+              <a class="btn btn--ghost" href="contact.html">이런 톤으로 문의하기</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+  </main>
 
   <footer class="footer">
     <div class="wrap footer__inner">
@@ -147,12 +143,10 @@
         <div class="muted">© <span data-year></span> NINETEEN STUDIO.</div>
       </div>
       <div class="footer__right">
-        <a class="link" href="/about.html">About</a>
-        <a class="link" href="/contact.html">Contact</a>
+        <a class="link" href="about.html">About</a>
+        <a class="link" href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
-
-  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
